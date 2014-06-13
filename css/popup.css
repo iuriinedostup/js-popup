@@ -1,0 +1,31 @@
+#popup-overlay {
+    position   : absolute;
+    top        : 0px;
+    left       : 0px;
+    z-index    : 554;
+    background : #000;
+    display    : none;
+}
+
+.popup {
+    display    : none;
+    padding    : 10px;
+    background : #e4e4e4;
+    z-index    : 555;
+    position   : relative;
+}
+
+.popup-close {
+    position   : absolute;
+    width      : 25px;
+    height     : 25px;
+    background : url("../img/popup-close.png") 0 0 no-repeat;
+    top        : 15px;
+    right      : 15px;
+    display    : block;
+}
+
+.popup-content {
+    padding    : 30px;
+    background : #fff;
+}
