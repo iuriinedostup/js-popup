@@ -1,4 +1,4 @@
 js-popup
 ========
 
-js class for create and use popup windows and demo
+This is demonstration of creating popup windows using Popup class for managing popup.
