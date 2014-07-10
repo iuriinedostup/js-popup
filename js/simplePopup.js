@@ -7,7 +7,7 @@ $(function () {
     $('.js-simple-popup').click(function (e) {
         e.preventDefault();
         var popup = new Popup();
-        popup.loadContent('<div class="simple-popup span6 clearfix">' +
+        popup.loadContent('<div class="simple-popup span6">' +
             '<h1>Simple Popup</h1>' +
             '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
             'Mauris ornare turpis nec tellus ultricies feugiat. ' +

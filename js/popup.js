@@ -118,20 +118,36 @@ Popup.prototype.ajaxFormSubmitSuccess = function () {
     return this;
 }
 
-Popup.prototype.showByUrl = function (url, data) {
+Popup.prototype.showByUrl = function (url, type, data) {
     if (typeof data == 'undefined') {
         data = {};
     }
 
+    if (typeof type == 'undefined' || (type != 'get' && type != 'post')) {
+        type = 'get';
+    }
+
     var obj = this;
-    $.get(url, data, function (res) {
+    var ajaxResponse = function (res) {
         if (res.result == true) {
             obj.loadContent(res.data);
             obj.showPopup();
         } else {
             obj.closePopup();
         }
-    }, 'json');
+    };
+
+    if (type == 'get') {
+        $.get(url, data, function (res) {
+            ajaxResponse(res);
+        }, 'json');
+    }
+
+    if (type == 'post') {
+        $.post(url, data, function (res) {
+            ajaxResponse(res);
+        }, 'json');
+    }
 };
 
 Popup.prototype.showById = function (id) {
