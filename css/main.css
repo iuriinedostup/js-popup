@@ -15,3 +15,8 @@ html, body {
 }
 
 .header { margin-bottom: 40px;}
+
+.popup [class*="span"] {
+    float: none;
+    margin-left: 0px;
+}
