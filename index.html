@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
     <script type="text/javascript" src="js/simplePopup.js"></script>
+    <script type="text/javascript" src="js/idPopup.js"></script>
 </head>
 <body>
     <div class="container layout">
@@ -23,8 +24,8 @@
             <h3>Examples:</h3>
             <hr />
             <p><span class="badge badge-info">1</span> Simple popup: <a href="#" title="Open Simple Popup" class="btn btn-success js-simple-popup">Simple Popup</a></p>
-            <p><span class="badge badge-info">2</span> Ajax Popup: <a href="#" title="Open Ajax Popup" class="btn btn-success">Ajax Popup</a></p>
-            <p><span class="badge badge-info">3</span> Popup by Id: <a href="#" title="Open Popup by Id" class="btn btn-success">Popup by Id</a></p>
+            <p><span class="badge badge-info">2</span> Popup by Id: <a href="#" title="Open Popup by Id" class="btn btn-success js-id-popup">Popup by Id</a> + triggers(watch in console)</p>
+            <p><span class="badge badge-info">3</span> Ajax Popup: <a href="#" title="Open Ajax Popup" class="btn btn-success">Ajax Popup</a></p>
         </div>
         <div class="push"></div>
     </div>
@@ -34,5 +35,9 @@
         <a href="#" title="Close" class="popup-close"></a>
         <div class="popup-content"></div>
     </div>
+<div class="hidden" id="js-popup-id">
+    <h1>Popup By Id</h1>
+    <p>This is an example of showing popup using hidden blocks.</p>
+</div>
 </body>
 </html>

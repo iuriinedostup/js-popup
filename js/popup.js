@@ -15,28 +15,28 @@ function mergeParams(arr1, arr2) {
 Popup = function Popup(options) {
 
     var defaults = {
-        'overlay': 'popup-overlay',
-        'popup': 'popup',
-        'popup_content': 'popup-content',
-        'popup_close': 'popup-close'
+        'overlay'       : 'popup-overlay',
+        'popup'         : 'popup',
+        'popup_content' : 'popup-content',
+        'popup_close'   : 'popup-close'
     };
 
     this.params = mergeParams(defaults, options);
 
     this.callbacks = {
-        'onAjaxFormSubmitSuccess': [],
-        'onContentLoad': [],
-        'onShow': [],
-        'beforeHide': [],
-        'onHide': []
+        'onAjaxFormSubmitSuccess'   : [],
+        'onContentLoad'             : [],
+        'onShow'                    : [],
+        'beforeHide'                : [],
+        'onHide'                    : []
     };
 
-    this.popup = $('.' + this.params.popup);
-    this.popupContent = this.popup.find('.' + this.params.popup_content);
-    this.popupClose = $('.' + this.params.popup_close);
-    this.overlay = $('#' + this.params.overlay);
-    this.overlay.hide();
+    this.popup          = $('.' + this.params.popup);
+    this.popupContent   = this.popup.find('.' + this.params.popup_content);
+    this.popupClose     = $('.' + this.params.popup_close);
+    this.overlay        = $('#' + this.params.overlay);
 
+    this.overlay.hide();
     this.popup.hide();
 };
 
